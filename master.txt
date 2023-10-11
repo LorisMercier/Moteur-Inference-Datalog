@@ -1,0 +1,197 @@
+# rules should start with a lowercase letter
+# arguments should be numbers or string
+# atoms should start with an uppercase letter
+# following characters shouldn't be used in names [(), :-]  
+
+eleve(1, loris).
+eleve(2, loic).
+eleve(3, julien).
+eleve(4, pierre_alain).
+
+ue(mif01, gestion_de_projet_et_genie_logiciel).
+ue(mif02, informatique_graphique).
+ue(mif03, conception_d'applications_web).
+ue(mif04, apprentissage_et_analyse_de_données).
+ue(mif05, reseaux).
+ue(mif06, base_de_l'ia).
+ue(mif08, compilation).
+ue(mif14, base_de_données_déductives).
+ue(mif26, théorie_des_jeux).
+ue(mif28, logiciels_educatifs).
+ue(mif29, cryptographie).
+
+prof(1, moy).
+prof(2, bouakaz).
+prof(3, medini).
+prof(4, elghazel).
+prof(5, guerin_lassous).
+prof(6, lefevre).
+prof(7, bonifati).
+prof(8, jean_daubias).
+prof(9, gavin).
+
+responsable(1, mif01).
+responsable(2, mif02).
+responsable(3, mif03).
+responsable(4, mif04).
+responsable(5, mif05).
+responsable(6, mif06).
+responsable(1, mif08).
+responsable(7, mif14).
+responsable(9, mif26).
+responsable(8, mif28).
+responsable(9, mif29).
+
+inscription(1, mif01).
+inscription(1, mif02).
+inscription(1, mif03).
+inscription(1, mif04).
+inscription(1, mif05).
+inscription(1, mif06).
+inscription(1, mif08).
+inscription(1, mif14).
+inscription(1, mif26).
+inscription(1, mif28).
+
+inscription(2, mif01).
+inscription(2, mif02).
+inscription(2, mif03).
+inscription(2, mif04).
+inscription(2, mif05).
+inscription(2, mif06).
+inscription(2, mif08).
+inscription(2, mif14).
+inscription(2, mif26).
+inscription(2, mif28).
+
+inscription(3, mif01).
+inscription(3, mif02).
+inscription(3, mif03).
+inscription(3, mif04).
+inscription(3, mif05).
+inscription(3, mif06).
+inscription(3, mif08).
+inscription(3, mif14).
+inscription(3, mif26).
+
+inscription(4, mif01).
+inscription(4, mif03).
+inscription(4, mif04).
+inscription(4, mif05).
+inscription(4, mif08).
+inscription(4, mif29).
+
+note(1, mif01, 18).
+note(1, mif01, 16).
+note(1, mif02, 18).
+note(1, mif02, 13).
+note(1, mif02, 10).
+note(1, mif03, 17).
+note(1, mif03, 8).
+note(1, mif04, 15).
+note(1, mif04, 13).
+note(1, mif05, 12).
+note(1, mif05, 14).
+note(1, mif05, 6).
+note(1, mif06, 11).
+note(1, mif06, 17).
+note(1, mif08, 20).
+note(1, mif14, 15).
+note(1, mif26, 14).
+note(1, mif28, 20).
+note(1, mif28, 20).
+note(1, mif28, 18).
+
+
+note(2, mif01, 12).
+note(2, mif02, 10).
+note(2, mif02, 14).
+note(2, mif02, 13).
+note(2, mif03, 14).
+note(2, mif03, 8).
+note(2, mif04, 15).
+note(2, mif04, 16).
+note(2, mif05, 16).
+note(2, mif05, 18).
+note(2, mif05, 15).
+note(2, mif06, 13).
+note(2, mif06, 18).
+note(2, mif08, 19).
+note(2, mif14, 16).
+note(2, mif26, 17).
+note(2, mif28, 20).
+note(2, mif28, 20).
+note(2, mif28, 20).
+
+note(3, mif01, 15).
+note(3, mif02, 15).
+note(3, mif02, 16).
+note(3, mif02, 7).
+note(3, mif03, 17).
+note(3, mif03, 11).
+note(3, mif04, 14).
+note(3, mif04, 13).
+note(3, mif05, 12).
+note(3, mif05, 5).
+note(3, mif05, 14).
+note(3, mif06, 14).
+note(3, mif06, 18).
+note(3, mif08, 20).
+note(3, mif14, 12).
+note(3, mif26, 15).
+
+note(4, mif01, 9).
+note(4, mif03, 17).
+note(4, mif03, 5).
+note(4, mif04, 16).
+note(4, mif04, 8).
+note(4, mif05, 18).
+note(4, mif05, 20).
+note(4, mif05, 17).
+note(4, mif08, 17).
+note(4, mif29, 20).
+note(4, mif29, 13).
+
+inscrits(NomUE, NomEleve):-ue(IdUE, NomUE), inscription(IdEleve,IdUE), eleve(IdEleve, NomEleve).
+
+donne_cours(NomProf, NomUe):-ue(IdUE, NomUe), responsable(IdProf, IdUE), prof(IdProf, NomProf).
+
+notes_par_ue(NomUe, Note):-note(_, IdUe, Note), ue(IdUe, NomUe).
+notes_par_eleve(NomEleve, Note):-note(IdEleve, _, Note), eleve(IdEleve, NomEleve).
+notes_par_prof(NomProf, Note):-note(_, IdUe, Note), responsable(IdProf, IdUe), prof(IdProf, NomProf).
+
+nb_inscrits(NomUe, Count):-inscrits(NomUe, NomEleve), COUNT(NomEleve, Count).
+
+nb_ue_suivies(NomEleve, Count):-inscrits(NomUe, NomEleve), COUNT(NomUe, Count).
+
+nb_cours_donné(NomProf, Count):-donne_cours(NomProf, NomUe), COUNT(NomUe, Count).
+
+nb_copie_prof(NomProf, Count):-notes_par_prof(NomProf, Note), COUNT(Note, Count).
+
+eleve_moyenne_par_ue(NomEleve, NomUe, Avg):-eleve(IdEleve, NomEleve), note(IdEleve, IdUe, Note), ue(IdUe, NomUe), AVG(Note, Avg).
+
+# requete intermediaire
+eleve_moyennes(NomEleve, Avg):-eleve_moyenne_par_ue(NomEleve, NomUe, Moyenne), AVG(Moyenne, Avg).
+
+eleve_moyenne(NomEleve, Avg):-eleve_moyennes(NomEleve, Moyenne), AVG(Moyenne, Avg).
+
+moyenne_ue(NomUe, Avg):-notes_par_ue(NomUe, Note), AVG(Note, Avg).
+
+note_max_ue(NomUe, Max):-notes_par_ue(NomUe, Note), MAX(Note, Max).
+
+note_min_ue(NomUe, Min):-notes_par_ue(NomUe, Note), MIN(Note, Min).
+
+note_max_eleve(NomEleve, Max):-notes_par_eleve(NomEleve, Note), MAX(Note, Max).
+
+note_min_eleve(NomEleve, Min):-notes_par_eleve(NomEleve, Note), MIN(Note, Min).
+
+note_max_prof(NomProf, Max):-notes_par_prof(NomProf, Note), MAX(Note, Max).
+
+note_min_prof(NomProf, Min):-notes_par_prof(NomProf, Note), MIN(Note, Min).
+
+nb_point_donné_prof(NomProf, Sum):-notes_par_prof(NomProf, Note), SUM(Note, Sum).
+
+nb_point_obtenu_eleve(NomEleve, Sum):-notes_par_eleve(NomEleve, Note), SUM(Note, Sum).
+
+
+

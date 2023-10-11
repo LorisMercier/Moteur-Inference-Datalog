@@ -1,0 +1,33 @@
+# rules should start with a lowercase letter
+# arguments should be numbers or string
+# atoms should start with an uppercase letter
+# following characters shouldn't be used in names [(), :-]  
+student(1,loris).
+student(2,loic).
+student(3,juju).
+student(4,mat).
+
+grade(1,1).
+grade(1,2).
+grade(1,15).
+grade(2,16).
+grade(2,2).
+grade(3,2).
+grade(3,5).
+
+name(loris, mercier).
+name(loic, chassin).
+name(martin, martin).
+name(martin, lamotte).
+name(thomas, thomas).
+
+
+diff(X,Y) :- grade(X,Y), X!=Y .
+equal(X,Y) :- grade(X,Y), X==Y.
+equalXYandDiff1(X,Y) :- grade(X,Y), X==Y, X!=1.
+greaterThan1(X,Y) :- grade(X,Y), X>1.
+lowerOrEqualThan2(X,Y) :- grade(X,Y), X<=2.
+
+diffString(X,Y) :- name(X,Y), X!=Y.
+equalString(X,Y) :- name(X,Y), X==Y.
+equalStringMartin(X,Y) :- name(X,Y), X==Y, X==martin.

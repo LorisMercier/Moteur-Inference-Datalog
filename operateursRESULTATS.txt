@@ -1,0 +1,39 @@
+diff(X, Y):
+1  2
+1 15
+2 16
+3  2
+3  5
+
+equal(X, Y):
+1 1
+2 2
+
+equalXYandDiff1(X, Y):
+2 2
+
+greaterThan1(X, Y):
+2 16
+2  2
+3  2
+3  5
+
+lowerOrEqualThan2(X, Y):
+1  1
+1  2
+1 15
+2 16
+2  2
+
+diffString(X, Y):
+ loris mercier
+  loic chassin
+martin lamotte
+
+equalString(X, Y):
+martin martin
+thomas thomas
+
+equalStringMartin(X, Y):
+martin martin
+

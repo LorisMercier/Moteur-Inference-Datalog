@@ -1,0 +1,465 @@
+inscrits(NomUE, NomEleve):
+ gestion_de_projet_et_genie_logiciel        loris
+              informatique_graphique        loris
+       conception_d'applications_web        loris
+apprentissage_et_analyse_de_données        loris
+                             reseaux        loris
+                        base_de_l'ia        loris
+                         compilation        loris
+        base_de_données_déductives        loris
+                   théorie_des_jeux        loris
+                 logiciels_educatifs        loris
+ gestion_de_projet_et_genie_logiciel         loic
+              informatique_graphique         loic
+       conception_d'applications_web         loic
+apprentissage_et_analyse_de_données         loic
+                             reseaux         loic
+                        base_de_l'ia         loic
+                         compilation         loic
+        base_de_données_déductives         loic
+                   théorie_des_jeux         loic
+                 logiciels_educatifs         loic
+ gestion_de_projet_et_genie_logiciel       julien
+              informatique_graphique       julien
+       conception_d'applications_web       julien
+apprentissage_et_analyse_de_données       julien
+                             reseaux       julien
+                        base_de_l'ia       julien
+                         compilation       julien
+        base_de_données_déductives       julien
+                   théorie_des_jeux       julien
+ gestion_de_projet_et_genie_logiciel pierre_alain
+       conception_d'applications_web pierre_alain
+apprentissage_et_analyse_de_données pierre_alain
+                             reseaux pierre_alain
+                         compilation pierre_alain
+                       cryptographie pierre_alain
+
+donne_cours(NomProf, NomUe):
+           moy  gestion_de_projet_et_genie_logiciel
+           moy                          compilation
+       bouakaz               informatique_graphique
+        medini        conception_d'applications_web
+      elghazel apprentissage_et_analyse_de_données
+guerin_lassous                              reseaux
+       lefevre                         base_de_l'ia
+      bonifati         base_de_données_déductives
+         gavin                    théorie_des_jeux
+         gavin                        cryptographie
+  jean_daubias                  logiciels_educatifs
+
+notes_par_ue(NomUe, Note):
+ gestion_de_projet_et_genie_logiciel 18
+ gestion_de_projet_et_genie_logiciel 16
+ gestion_de_projet_et_genie_logiciel 12
+ gestion_de_projet_et_genie_logiciel 15
+ gestion_de_projet_et_genie_logiciel  9
+              informatique_graphique 18
+              informatique_graphique 13
+              informatique_graphique 10
+              informatique_graphique 10
+              informatique_graphique 14
+              informatique_graphique 13
+              informatique_graphique 15
+              informatique_graphique 16
+              informatique_graphique  7
+       conception_d'applications_web 17
+       conception_d'applications_web  8
+       conception_d'applications_web 14
+       conception_d'applications_web  8
+       conception_d'applications_web 17
+       conception_d'applications_web 11
+       conception_d'applications_web 17
+       conception_d'applications_web  5
+apprentissage_et_analyse_de_données 15
+apprentissage_et_analyse_de_données 13
+apprentissage_et_analyse_de_données 15
+apprentissage_et_analyse_de_données 16
+apprentissage_et_analyse_de_données 14
+apprentissage_et_analyse_de_données 13
+apprentissage_et_analyse_de_données 16
+apprentissage_et_analyse_de_données  8
+                             reseaux 12
+                             reseaux 14
+                             reseaux  6
+                             reseaux 16
+                             reseaux 18
+                             reseaux 15
+                             reseaux 12
+                             reseaux  5
+                             reseaux 14
+                             reseaux 18
+                             reseaux 20
+                             reseaux 17
+                        base_de_l'ia 11
+                        base_de_l'ia 17
+                        base_de_l'ia 13
+                        base_de_l'ia 18
+                        base_de_l'ia 14
+                        base_de_l'ia 18
+                         compilation 20
+                         compilation 19
+                         compilation 20
+                         compilation 17
+        base_de_données_déductives 15
+        base_de_données_déductives 16
+        base_de_données_déductives 12
+                   théorie_des_jeux 14
+                   théorie_des_jeux 17
+                   théorie_des_jeux 15
+                 logiciels_educatifs 20
+                 logiciels_educatifs 20
+                 logiciels_educatifs 18
+                 logiciels_educatifs 20
+                 logiciels_educatifs 20
+                 logiciels_educatifs 20
+                       cryptographie 20
+                       cryptographie 13
+
+notes_par_eleve(NomEleve, Note):
+       loris 18
+       loris 16
+       loris 18
+       loris 13
+       loris 10
+       loris 17
+       loris  8
+       loris 15
+       loris 13
+       loris 12
+       loris 14
+       loris  6
+       loris 11
+       loris 17
+       loris 20
+       loris 15
+       loris 14
+       loris 20
+       loris 20
+       loris 18
+        loic 12
+        loic 10
+        loic 14
+        loic 13
+        loic 14
+        loic  8
+        loic 15
+        loic 16
+        loic 16
+        loic 18
+        loic 15
+        loic 13
+        loic 18
+        loic 19
+        loic 16
+        loic 17
+        loic 20
+        loic 20
+        loic 20
+      julien 15
+      julien 15
+      julien 16
+      julien  7
+      julien 17
+      julien 11
+      julien 14
+      julien 13
+      julien 12
+      julien  5
+      julien 14
+      julien 14
+      julien 18
+      julien 20
+      julien 12
+      julien 15
+pierre_alain  9
+pierre_alain 17
+pierre_alain  5
+pierre_alain 16
+pierre_alain  8
+pierre_alain 18
+pierre_alain 20
+pierre_alain 17
+pierre_alain 17
+pierre_alain 20
+pierre_alain 13
+
+notes_par_prof(NomProf, Note):
+           moy 18
+           moy 16
+           moy 12
+           moy 15
+           moy  9
+           moy 20
+           moy 19
+           moy 20
+           moy 17
+       bouakaz 18
+       bouakaz 13
+       bouakaz 10
+       bouakaz 10
+       bouakaz 14
+       bouakaz 13
+       bouakaz 15
+       bouakaz 16
+       bouakaz  7
+        medini 17
+        medini  8
+        medini 14
+        medini  8
+        medini 17
+        medini 11
+        medini 17
+        medini  5
+      elghazel 15
+      elghazel 13
+      elghazel 15
+      elghazel 16
+      elghazel 14
+      elghazel 13
+      elghazel 16
+      elghazel  8
+guerin_lassous 12
+guerin_lassous 14
+guerin_lassous  6
+guerin_lassous 16
+guerin_lassous 18
+guerin_lassous 15
+guerin_lassous 12
+guerin_lassous  5
+guerin_lassous 14
+guerin_lassous 18
+guerin_lassous 20
+guerin_lassous 17
+       lefevre 11
+       lefevre 17
+       lefevre 13
+       lefevre 18
+       lefevre 14
+       lefevre 18
+      bonifati 15
+      bonifati 16
+      bonifati 12
+         gavin 14
+         gavin 17
+         gavin 15
+         gavin 20
+         gavin 13
+  jean_daubias 20
+  jean_daubias 20
+  jean_daubias 18
+  jean_daubias 20
+  jean_daubias 20
+  jean_daubias 20
+
+nb_inscrits(NomUe, Count):
+apprentissage_et_analyse_de_données 4
+        base_de_données_déductives 3
+                        base_de_l'ia 3
+                         compilation 4
+       conception_d'applications_web 4
+                       cryptographie 1
+ gestion_de_projet_et_genie_logiciel 4
+              informatique_graphique 3
+                 logiciels_educatifs 2
+                             reseaux 4
+                   théorie_des_jeux 3
+
+nb_ue_suivies(NomEleve, Count):
+      julien  9
+        loic 10
+       loris 10
+pierre_alain  6
+
+nb_cours_donné(NomProf, Count):
+      bonifati 1
+       bouakaz 1
+      elghazel 1
+         gavin 2
+guerin_lassous 1
+  jean_daubias 1
+       lefevre 1
+        medini 1
+           moy 2
+
+nb_copie_prof(NomProf, Count):
+      bonifati  3
+       bouakaz  9
+      elghazel  8
+         gavin  5
+guerin_lassous 12
+  jean_daubias  6
+       lefevre  6
+        medini  8
+           moy  9
+
+eleve_moyenne_par_ue(NomEleve, NomUe, Avg):
+       loris  gestion_de_projet_et_genie_logiciel 17.000000
+       loris               informatique_graphique 13.666667
+       loris        conception_d'applications_web 12.500000
+       loris apprentissage_et_analyse_de_données 14.000000
+       loris                              reseaux 10.666667
+       loris                         base_de_l'ia 14.000000
+       loris                          compilation 20.000000
+       loris         base_de_données_déductives 15.000000
+       loris                    théorie_des_jeux 14.000000
+       loris                  logiciels_educatifs 19.333333
+        loic  gestion_de_projet_et_genie_logiciel 12.000000
+        loic               informatique_graphique 12.333333
+        loic        conception_d'applications_web 11.000000
+        loic apprentissage_et_analyse_de_données 15.500000
+        loic                              reseaux 16.333333
+        loic                         base_de_l'ia 15.500000
+        loic                          compilation 19.000000
+        loic         base_de_données_déductives 16.000000
+        loic                    théorie_des_jeux 17.000000
+        loic                  logiciels_educatifs 20.000000
+      julien  gestion_de_projet_et_genie_logiciel 15.000000
+      julien               informatique_graphique 12.666667
+      julien        conception_d'applications_web 14.000000
+      julien apprentissage_et_analyse_de_données 13.500000
+      julien                              reseaux 10.333333
+      julien                         base_de_l'ia 16.000000
+      julien                          compilation 20.000000
+      julien         base_de_données_déductives 12.000000
+      julien                    théorie_des_jeux 15.000000
+pierre_alain  gestion_de_projet_et_genie_logiciel  9.000000
+pierre_alain        conception_d'applications_web 11.000000
+pierre_alain apprentissage_et_analyse_de_données 12.000000
+pierre_alain                              reseaux 18.333333
+pierre_alain                          compilation 17.000000
+pierre_alain                        cryptographie 16.500000
+
+eleve_moyennes(NomEleve, Avg):
+      julien 13.500000
+      julien 12.000000
+      julien 16.000000
+      julien 20.000000
+      julien 14.000000
+      julien 15.000000
+      julien 12.666667
+      julien 10.333333
+      julien 15.000000
+        loic 15.500000
+        loic 16.000000
+        loic 15.500000
+        loic 19.000000
+        loic 11.000000
+        loic 12.000000
+        loic 12.333333
+        loic 20.000000
+        loic 16.333333
+        loic 17.000000
+       loris 14.000000
+       loris 15.000000
+       loris 14.000000
+       loris 20.000000
+       loris 12.500000
+       loris 17.000000
+       loris 13.666667
+       loris 19.333333
+       loris 10.666667
+       loris 14.000000
+pierre_alain 12.000000
+pierre_alain 17.000000
+pierre_alain 11.000000
+pierre_alain 16.500000
+pierre_alain  9.000000
+pierre_alain 18.333333
+
+eleve_moyenne(NomEleve, Avg):
+      julien 14.277778
+        loic 15.466667
+       loris 15.016667
+pierre_alain 13.972222
+
+moyenne_ue(NomUe, Avg):
+apprentissage_et_analyse_de_données 13.750000
+        base_de_données_déductives 14.333333
+                        base_de_l'ia 15.166667
+                         compilation 19.000000
+       conception_d'applications_web 12.125000
+                       cryptographie 16.500000
+ gestion_de_projet_et_genie_logiciel 14.000000
+              informatique_graphique 12.888889
+                 logiciels_educatifs 19.666667
+                             reseaux 13.916667
+                   théorie_des_jeux 15.333333
+
+note_max_ue(NomUe, Max):
+apprentissage_et_analyse_de_données 16
+        base_de_données_déductives 16
+                        base_de_l'ia 18
+                         compilation 20
+       conception_d'applications_web 17
+                       cryptographie 20
+ gestion_de_projet_et_genie_logiciel 18
+              informatique_graphique 18
+                 logiciels_educatifs 20
+                             reseaux 20
+                   théorie_des_jeux 17
+
+note_min_ue(NomUe, Min):
+apprentissage_et_analyse_de_données  8
+        base_de_données_déductives 12
+                        base_de_l'ia 11
+                         compilation 17
+       conception_d'applications_web  5
+                       cryptographie 13
+ gestion_de_projet_et_genie_logiciel  9
+              informatique_graphique  7
+                 logiciels_educatifs 18
+                             reseaux  5
+                   théorie_des_jeux 14
+
+note_max_eleve(NomEleve, Max):
+      julien 20
+        loic 20
+       loris 20
+pierre_alain 20
+
+note_min_eleve(NomEleve, Min):
+      julien 5
+        loic 8
+       loris 6
+pierre_alain 5
+
+note_max_prof(NomProf, Max):
+      bonifati 16
+       bouakaz 18
+      elghazel 16
+         gavin 20
+guerin_lassous 20
+  jean_daubias 20
+       lefevre 18
+        medini 17
+           moy 20
+
+note_min_prof(NomProf, Min):
+      bonifati 12
+       bouakaz  7
+      elghazel  8
+         gavin 13
+guerin_lassous  5
+  jean_daubias 18
+       lefevre 11
+        medini  5
+           moy  9
+
+nb_point_donné_prof(NomProf, Sum):
+      bonifati  43
+       bouakaz 116
+      elghazel 110
+         gavin  79
+guerin_lassous 167
+  jean_daubias 118
+       lefevre  91
+        medini  97
+           moy 146
+
+nb_point_obtenu_eleve(NomEleve, Sum):
+      julien 218
+        loic 294
+       loris 295
+pierre_alain 160
+
